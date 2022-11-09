@@ -2,7 +2,6 @@ import React from 'react'
 import Devices from '../components/Devices'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
-import Topbar from '../components/Topbar'
 
 const DeviceList = () => {
   return (
