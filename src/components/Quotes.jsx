@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
+import { Link } from "react-router-dom"
 import { db } from '../firebase'
 import {
     collection,
@@ -36,7 +37,6 @@ const Quotes = () => {
           <table className="table table-striped table-sm">
             <thead>
               <tr>
-                <th scope="col">ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Storage</th>
                 <th scope="col">Color</th>
@@ -47,12 +47,13 @@ const Quotes = () => {
             <tbody>
                 {quoteData?.map((data)=>(
                     <tr>
-                        <td>{data.id}</td>
                         <td>{data.name}</td>
                         <td>{data.size}</td>
                         <td>{data.color}</td>
                         <td>{data.condition}</td>
                         <td>Status</td>
+                        <td><Link to={`/quotes/${data.id}`}><button className='btn btn-outline-primary btn-sm'>View</button></Link></td>
+                        <td><button className='btn btn-outline-danger btn-sm'>Delete</button></td>
                     </tr>
                 ))}
             </tbody>

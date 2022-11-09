@@ -73,24 +73,25 @@ const SingleDevice = () => {
                 
                 <div className="col-md-7 col-lg-8">
                 <h4 className="mb-3">Edit</h4>
+                
                   <div className="row g-3">
                     <div className="col-sm-6">
-                      <label for="name" className="form-label">Name</label>
+                      <label className="form-label">Name</label>
                       <input type="text" className="form-control" id="name" placeholder="" value={phoneData?.name} onChange={(e)=>setPhoneData({...phoneData, name: e.target.value})}/>
                     </div>
 
                     <div className="col-sm-6">
-                      <label for="maxPrice" className="form-label">Max. Price</label>
+                      <label className="form-label">Max. Price</label>
                       <input type="number" className="form-control" id="maxPrice" placeholder="" value={phoneData?.maxPrice} onChange={(e)=>setPhoneData({...phoneData, maxPrice: e.target.value})}/>
                     </div>
 
                     <div className="col-sm-6">
-                      <label for="size" className="form-label">Size</label>
+                      <label className="form-label">Size</label>
                       <input type="text" className="form-control" id="size" placeholder="" value={phoneData?.size} onChange={handleChange}/>
                     </div>
 
                     <div className="col-sm-6">
-                      <label for="color" className="form-label">Color</label>
+                      <label className="form-label">Color</label>
                       <input type="text" className="form-control" id="color" placeholder="" value={phoneData?.color} onChange={handleChange}/>
                     </div>
 
